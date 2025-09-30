@@ -1,21 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Ball : MonoBehaviour
 {
+    public AudioClip bounceSound;
+    public float speed = 36.0f;
     private Rigidbody rb;
-    // Start is called before the first frame update
     void Start()
     {
+      transform.eulerAngles = new Vector3(0, 90, 0);
         rb = GetComponent<Rigidbody>();
+        float angle = Random.value * 44 - 22;
 
-        rb.velocity = new Vector3(3.0, 0f, 1.0f);
+        if (Random.value < 0.5f) 
+        {
+            angle += 180; 
+        }
+        transform.eulerAngles += new Vector3(0, angle, 0);
+        rb.velocity = transform.forward * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision) 
     {
-        
+        if (!collision.transform.CompareTag("Floor"))
+        {
+            AudioSource.PlayClipAtPoint(bounceSound, transform.position, 1.0f);
+        }
     }
+
 }
