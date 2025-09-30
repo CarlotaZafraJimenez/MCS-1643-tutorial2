@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class Ball : MonoBehaviour
+    public class Ball : MonoBehaviour
 {
     public AudioClip bounceSound;
     public float speed = 36.0f;
