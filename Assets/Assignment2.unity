@@ -606,9 +606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac66787736863144b59cee5267f2882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinningScore: 0
-  player1text: {fileID: 0}
-  player2text: {fileID: 0}
 --- !u!1 &669960523
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682282086}
   - component: {fileID: 682282085}
+  - component: {fileID: 682282087}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -706,9 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac66787736863144b59cee5267f2882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinningScore: 0
-  player1text: {fileID: 422997315}
-  player2text: {fileID: 2039311281}
 --- !u!4 &682282086
 Transform:
   m_ObjectHideFlags: 0
@@ -724,6 +719,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &682282087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682282084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ff60ec3de1eff458a3aca34af74c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1text: {fileID: 0}
+  player2text: {fileID: 0}
+  winMessage: {fileID: 0}
 --- !u!1 &688378364
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +851,7 @@ GameObject:
   - component: {fileID: 724099785}
   - component: {fileID: 724099784}
   - component: {fileID: 724099783}
+  - component: {fileID: 724099787}
   m_Layer: 0
   m_Name: LeftDeathZone
   m_TagString: Untagged
@@ -934,6 +945,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724099787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724099782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caea3271d6e0d6f4aa0f4144f7606766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 0}
+  ballPrefab: {fileID: 0}
+  opposingPlayer: 0
+  outSound: {fileID: 0}
 --- !u!1 &1696883762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1170,7 @@ GameObject:
   - component: {fileID: 1776847503}
   - component: {fileID: 1776847502}
   - component: {fileID: 1776847501}
+  - component: {fileID: 1776847505}
   m_Layer: 0
   m_Name: Paddle(1)
   m_TagString: Untagged
@@ -1236,6 +1264,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1776847505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776847500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7e03896cda1034fa7d16ed08d428e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  upKey: 119
+  downKey: 115
+  maxZ: 9
 --- !u!1 &1831867551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813d3e44077b3fa4ba9e67b2bda949e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceSound: {fileID: 0}
+  speed: 36
 --- !u!1 &1901051432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,6 +1440,7 @@ GameObject:
   - component: {fileID: 1901051435}
   - component: {fileID: 1901051434}
   - component: {fileID: 1901051433}
+  - component: {fileID: 1901051437}
   m_Layer: 0
   m_Name: RightDeathZone
   m_TagString: Untagged
@@ -1487,6 +1534,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1901051437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901051432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caea3271d6e0d6f4aa0f4144f7606766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 0}
+  ballPrefab: {fileID: 0}
+  opposingPlayer: 0
+  outSound: {fileID: 0}
 --- !u!1 &2020801320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,9 +1831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac66787736863144b59cee5267f2882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinningScore: 0
-  player1text: {fileID: 0}
-  player2text: {fileID: 0}
 --- !u!1 &2121743503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1844,7 @@ GameObject:
   - component: {fileID: 2121743505}
   - component: {fileID: 2121743504}
   - component: {fileID: 2121743508}
+  - component: {fileID: 2121743509}
   m_Layer: 0
   m_Name: Paddle(2)
   m_TagString: Untagged
@@ -1889,6 +1950,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb671a29a11cd2479681916768062ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2121743509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121743503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7e03896cda1034fa7d16ed08d428e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  upKey: 273
+  downKey: 274
+  maxZ: 9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

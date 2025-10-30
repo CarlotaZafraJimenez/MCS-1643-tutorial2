@@ -13,17 +13,17 @@ public class Paddle : MonoBehaviour
     {
         if (Input.GetKey(upKey))
         {
-            transform.Position += new Vector3(0, 0, speed * Time.deltaTime);
-            if (tranform.position.z > maxZ)
+            transform.position += new Vector3(0, 0, speed * Time.deltaTime);
+            if (transform.position.z > maxZ)
             {
-                Transform.position = new Vector3(
+                transform.position = new Vector3(
                 transform.position.x, transform.position.y, maxZ);
             }
         }
         else if (Input.GetKey(downKey))
         {
-            transform.position + new Vector3(0, 0, -1 * speed * Time.deltaTime);
-            if (tranform.position.z < -1 * maxZ)
+            transform.position += new Vector3(0, 0, -1 * speed * Time.deltaTime);
+            if (transform.position.z < -1 * maxZ)
             {
                 transform.position = new Vector3(
                 transform.position.x, transform.position.y, -1 * maxZ);
