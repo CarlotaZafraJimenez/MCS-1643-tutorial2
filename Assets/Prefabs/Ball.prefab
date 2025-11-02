@@ -146,3 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813d3e44077b3fa4ba9e67b2bda949e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceSound: {fileID: 8300000, guid: 6376a4b6563451f42861579690be36f2, type: 3}
+  speed: 36

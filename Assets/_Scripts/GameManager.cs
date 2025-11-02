@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-    public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
         public static int winScore = 10;
         public TMP_Text player1text;
         public TMP_Text player2text;
         public TMP_Text winMessage;
 
-    private static int player1score;
+        private static int player1score;
         private static int player2score;
 
        public static bool playing;
@@ -43,6 +43,8 @@ using TMPro;
             winMessage.transform.parent.gameObject.SetActive(true);
         }
     }
+
+
     public static void AddScore(int player)
     {
         if (player == 1)
